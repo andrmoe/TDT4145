@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="600.0" maxWidth="335.0" minHeight="600.0" minWidth="335.0" prefHeight="600.0" prefWidth="335.0" spacing="50.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.HomeController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#handleStartTraining" prefHeight="150.0" prefWidth="250.0" text="Start trening">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleStatistics" prefHeight="150.0" prefWidth="250.0" text="Statstikk">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="10.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleNew" prefHeight="150.0" prefWidth="250.0" text="Legg til ny øvelse, øvelsesgruppe eller et nytt apparat" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      </children>
+</VBox>

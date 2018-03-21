@@ -1,15 +1,10 @@
-package core;
+package app;
 
-import controller.HomeController;
+import app.controller.HomeController;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -23,11 +18,10 @@ public class TreningsdagbokApp extends Application {
 		
 		//Home
 		
-		FXMLLoader homeLoader = new FXMLLoader(getClass().getResource("/resources/Home.fxml")); 
+		FXMLLoader homeLoader = new FXMLLoader(getClass().getResource("/app/resources/Home.fxml")); 
         Parent root = homeLoader.load();
         HomeController homeController = homeLoader.getController();
         Scene home = new Scene(root);
-        
         stage.setScene(home);
         stage.show();
     }
