@@ -6,8 +6,8 @@ public class DBConnect {
 	
 	private Connection conn;
 	
-	public DBConnect(String url, String username, String password) {
-		conn = DatabaseConnection(url, username, password);
+	public DBConnect() {
+		conn = DatabaseConnection("jdbc:mysql://127.0.0.1:3306/treningsdagbok", "root", "6756");
 	}
 	
 	private Connection DatabaseConnection (String url, String username, String password) {
@@ -30,10 +30,12 @@ public class DBConnect {
 	public Connection getConnection() {
 		return this.conn;
 	}
-	public ResultSet getResultSet(String sqlQuery) throws SQLException {
-		Statement statement = conn.createStatement();
-		return statement.executeQuery(sqlQuery);
+	
+	public void updateRecords(String sqlQuery) throws SQLException {
+		Statement stmt = conn.createStatement();
+		stmt.executeUpdate(sqlQuery);
 	}
+	
 	
 	public int displayResults(ResultSet result) throws SQLException {
         ResultSetMetaData meta = result.getMetaData();
@@ -57,16 +59,6 @@ public class DBConnect {
 	}
 
 	
-	public static void main(String[] args) throws SQLException {
-		DBConnect con = new DBConnect(
-             "jdbc:mysql://127.0.0.1:3306/treningsdagbok",
-             "root",
-             "6756");
-		String query = "SELECT * from apparat";
-		ResultSet rs = con.getResultSet(query);
-		con.displayResults(rs);
-		con.close();
-	}
 	
 	
 }

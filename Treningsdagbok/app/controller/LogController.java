@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.database.DBStatements;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -15,7 +16,7 @@ public class LogController extends ControllerParent {
 	
 	@FXML
 	public void handleAddExercise() {
-		
+	
 	}
 	
 	@FXML
